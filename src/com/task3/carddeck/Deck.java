@@ -1,6 +1,22 @@
 package com.task3.carddeck;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Deck {
+
+    ArrayList<Card> cards = new ArrayList<Card>();
+
+    public Deck() {
+
+        for (int i = 0; i < Suit.values.length; i++)
+        {
+            for (int j = 0; j < Rank.values.length; j++) {
+                cards.add(new Card(Rank.values[j], Suit.values[i]));
+            }
+        }
+    }
+
     //Перемішує колоду у випадковому порядку
     public void shuffle() {
     }
