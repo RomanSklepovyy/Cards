@@ -1,10 +1,12 @@
 package com.task3.carddeck;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-public class Deck {
-
+public class Deck
+{
     ArrayList<Card> cards = new ArrayList<Card>();
 
     public Deck() {
@@ -18,7 +20,9 @@ public class Deck {
     }
 
     //Перемішує колоду у випадковому порядку
-    public void shuffle() {
+    public void shuffle()
+    {
+        Collections.shuffle(cards);
     }
     /* * Впорядкування колоди за мастями та значеннями
      * Порядок сотрування:
@@ -35,7 +39,9 @@ public class Deck {
      * HEARTS 7
      * HEARTS 6
      * І так далі для DIAMONDS, CLUBS, SPADES */
-    public void order() {
+    public void order()
+    {
+       
     }
     //Повертає true у випадку коли в колоді ще доступні карти
     public boolean hasNext() {
